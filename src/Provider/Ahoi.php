@@ -22,8 +22,7 @@ class Ahoi extends AbstractProvider
      *
      * @var string
      */
-    public $url = 'https://demo.fvjm.de';
-
+    protected $ahoiInstanceUrl;
     /**
      * Get authorization url to begin OAuth flow
      *
@@ -31,7 +30,7 @@ class Ahoi extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return $this->url.'/authorize';
+        return "{$this->ahoiInstanceUrl}/authorize";
     }
 
     /**
@@ -41,7 +40,7 @@ class Ahoi extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return $this->url.'/token';
+        return "{$this->ahoiInstanceUrl}/token";
     }
 
     /**
@@ -53,7 +52,7 @@ class Ahoi extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return $this->url.'/me';
+        return "{$this->ahoiInstanceUrl}/me";
     }
 
     /**

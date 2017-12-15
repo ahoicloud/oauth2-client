@@ -26,6 +26,7 @@ Usage is the same as The League's OAuth client, using `\FVJM\OAuth2\Client\Provi
 $provider = new FVJM\OAuth2\Client\Provider\Ahoi([
     'clientId'          => '{ahoi-client-id}',
     'clientSecret'      => '{ahoi-client-secret}',
+    'ahoiInstanceUrl'      => '{ahoi-instance-url}',
     'redirectUri'       => 'https://example.com/callback-url'
 ]);
 
@@ -95,6 +96,7 @@ At the time of authoring this documentation, the following scopes are available.
 $provider = new FVJM\OAuth2\Client\Provider\Ahoi([
     'clientId'          => '{ahoi-client-id}',
     'clientSecret'      => '{ahoi-client-secret}',
+    'ahoiInstanceUrl'      => '{ahoi-instance-url}',
     'redirectUri'       => 'https://example.com/callback-url'
 ]);
 
