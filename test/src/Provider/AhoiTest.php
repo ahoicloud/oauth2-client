@@ -11,7 +11,7 @@ class AhoiTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->provider = new \Stevenmaguire\OAuth2\Client\Provider\Ahoi([
+        $this->provider = new \FVJM\OAuth2\Client\Provider\Ahoi([
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_secret',
             'redirectUri' => 'none',
