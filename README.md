@@ -6,7 +6,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/ahoicloud/oauth2-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/ahoicloud/oauth2-client)
 [![Total Downloads](https://img.shields.io/packagist/dt/ahoicloud/oauth2-client.svg?style=flat-square)](https://packagist.org/packages/ahoicloud/oauth2-client)
 
-This package provides Uber OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+This package provides Ahoi OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Installation
 
@@ -18,7 +18,7 @@ composer require ahoicloud/oauth2-client
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\FVJM\OAuth2\Client\Provider\Uber` as the provider.
+Usage is the same as The League's OAuth client, using `\FVJM\OAuth2\Client\Provider\Ahoi` as the provider.
 
 ### Authorization Code Flow
 
@@ -73,7 +73,7 @@ if (!isset($_GET['code'])) {
 
 ### Managing Scopes
 
-When creating your Uber authorization URL, you can specify the state and scopes your application may authorize.
+When creating your Ahoi authorization URL, you can specify the state and scopes your application may authorize.
 
 ```php
 $options = [
@@ -119,4 +119,4 @@ $ ./vendor/bin/phpunit
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/stevenmaguire/oauth2-uber/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/ahoicloud/oauth2-client/blob/master/LICENSE) for more information.
