@@ -18,7 +18,7 @@ class AhoiResourceOwner implements ResourceOwnerInterface
      */
     public function __construct(array $response = array())
     {
-        $this->response = $response;
+        $this->response = $response["message"];
     }
 
     /**
@@ -38,7 +38,7 @@ class AhoiResourceOwner implements ResourceOwnerInterface
      */
     public function getFirstname()
     {
-        return $this->response['first_name'] ?: null;
+        return $this->response['firstname'] ?: null;
     }
 
     /**
@@ -58,7 +58,7 @@ class AhoiResourceOwner implements ResourceOwnerInterface
      */
     public function getLastname()
     {
-        return $this->response['last_name'] ?: null;
+        return $this->response['lastname'] ?: null;
     }
 
     /**
@@ -68,7 +68,7 @@ class AhoiResourceOwner implements ResourceOwnerInterface
      */
     public function getId()
     {
-        return $this->response['uuid'] ?: null;
+        return $this->response['id'] ?: null;
     }
 
     /**
