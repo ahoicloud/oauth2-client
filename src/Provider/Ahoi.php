@@ -91,7 +91,7 @@ class Ahoi extends AbstractProvider
     protected function checkResponse(ResponseInterface $response, $data)
     {
         $acceptableStatuses = [200, 201];
-
+        $data['message']=isset($data['message'])?$data['message']:null;
         if (!in_array($response->getStatusCode(), $acceptableStatuses)) {
             throw new IdentityProviderException(
                 $data['message'] ?: $response->getReasonPhrase(),
