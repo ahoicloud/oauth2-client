@@ -104,6 +104,33 @@ $grant = new \League\OAuth2\Client\Grant\RefreshToken();
 $token = $provider->getAccessToken($grant, ['refresh_token' => $refreshToken]);
 ```
 
+### Client Credentials Grant
+
+When your application is acting on its own behalf to access resources it controls/owns in a service provider, it may use the client credentials grant type. This is best used when the credentials for your application are stored privately and never exposed (e.g. through the web browser, etc.) to end-users. This grant type functions similarly to the resource owner password credentials grant type, but it does not request a user's username or password. It uses only the client ID and secret issued to your client by the service provider.
+
+
+``` php
+
+$provider = new FVJM\OAuth2\Client\Provider\Ahoi([
+    'clientId'          => '{ahoi-client-id}',
+    'clientSecret'      => '{ahoi-client-secret}',
+    'ahoiInstanceUrl'      => '{ahoi-instance-url}',
+    'redirectUri'       => 'https://example.com/callback-url'
+]);
+
+try {
+
+    // Try to get an access token using the client credentials grant.
+    $accessToken = $provider->getAccessToken('client_credentials');
+
+} catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+
+    // Failed to get the access token
+    exit($e->getMessage());
+
+}
+```
+
 ## Testing
 
 ``` bash
